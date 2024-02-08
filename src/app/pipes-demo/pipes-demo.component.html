@@ -1,0 +1,36 @@
+<div>
+    <table>
+        <tr>
+            <th>UName</th>
+            <td>{{name|uppercase}}</td>
+        </tr>
+        <tr>
+            <th>LName</th>
+            <td>{{name|lowercase}}</td>
+        </tr>
+
+        <tr>
+            <th>Date</th>
+            <td>{{today}}</td>
+        </tr>
+        <tr>
+            <th>Date</th>
+            <td>{{today |date:'dd/MMMM/yyyy'}}</td>
+        </tr> <tr>
+            <th>Date</th>
+            <td>{{today |date:'dd/MM'}}</td>
+        </tr> <tr>
+            <th>Date</th>
+            <td>{{today |date:'fullDate |uppercase'}}</td>
+        </tr>
+        <tr>
+            <th>Amount</th>
+            <td>{{amount|percent}}</td>
+        </tr>
+        <tr>
+            <th>Amount</th>
+            <td>{{amount|currency:'USD'}}</td>
+        </tr>
+
+    </table>  
+</div>

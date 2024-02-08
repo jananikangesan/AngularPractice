@@ -1,0 +1,26 @@
+<div>
+    <p>Employee works details</p>
+</div>
+<div>
+    <table>
+        <thead>
+          <tr>
+              <th>No</th>
+              <th>Id</th>
+              <th>Name</th>
+              <th>Salary</th>
+          </tr>
+        </thead>
+          <tr *ngFor="let employee of employees; let i=index">
+              <td>{{i+1}}</td>
+              <td>{{employee.id}}</td>
+              <td>{{employee.name}}</td>
+              <td *ngIf="employee.salary<100000"><font color="red">{{employee.salary}}</font></td>
+              <td *ngIf="employee.salary>90000"><font color="green">{{employee.salary}}</font></td>
+              <td ng-template #elseBlock1></td>
+          </tr>
+      </table>
+      
+</div>
+
+
