@@ -10,6 +10,9 @@ import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.compon
 import { FormsModule } from '@angular/forms';
 import { PipesDemoComponent } from './pipes-demo/pipes-demo.component';
 import { EmployeeServiceService } from './service/employee-service.service';
+import { BackendServiceService } from './service/backend-service.service';
+import { CustomerDetailsComponent } from './customer-details/customer-details.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,16 +21,19 @@ import { EmployeeServiceService } from './service/employee-service.service';
     TestComponent,
     DisplayEmployeesComponent,
     TwoWayBindingComponent,
-    PipesDemoComponent
+    PipesDemoComponent,
+    CustomerDetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [
     provideClientHydration(),
-    EmployeeServiceService
+    EmployeeServiceService,
+    BackendServiceService
   ],
   bootstrap: [AppComponent]
 })
