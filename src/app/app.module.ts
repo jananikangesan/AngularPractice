@@ -9,6 +9,7 @@ import { DisplayEmployeesComponent } from './display-employees/display-employees
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
 import { FormsModule } from '@angular/forms';
 import { PipesDemoComponent } from './pipes-demo/pipes-demo.component';
+import { EmployeeServiceService } from './service/employee-service.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { PipesDemoComponent } from './pipes-demo/pipes-demo.component';
     FormsModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    EmployeeServiceService
   ],
   bootstrap: [AppComponent]
 })

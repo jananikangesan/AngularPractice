@@ -2,4 +2,17 @@
 <app-login></app-login> -->
 <!-- <app-display-employees></app-display-employees> -->
 <!-- <app-two-way-binding></app-two-way-binding> -->
-<app-pipes-demo></app-pipes-demo>
+<!-- <app-pipes-demo></app-pipes-demo> -->
+
+<div>
+    <table width="100%" [cellSpacing]="5" [cellPadding]="5">
+        <thead>
+            <tr>
+                <td><a routerLink="TwoWaydemo">TwoWaydemo</a></td>
+                <td><a routerLink="ShowEmployee">Display employee</a></td>
+                <td><a routerLink="PipeDemo">PipeDemo</a></td>
+            </tr>
+        </thead>
+    </table>
+</div>
+<router-outlet></router-outlet>
