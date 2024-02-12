@@ -13,6 +13,7 @@ import { EmployeeServiceService } from './service/employee-service.service';
 import { BackendServiceService } from './service/backend-service.service';
 import { CustomerDetailsComponent } from './customer-details/customer-details.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { AddCustomerComponent } from './add-customer/add-customer.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     DisplayEmployeesComponent,
     TwoWayBindingComponent,
     PipesDemoComponent,
-    CustomerDetailsComponent
+    CustomerDetailsComponent,
+    AddCustomerComponent
   ],
   imports: [
     BrowserModule,

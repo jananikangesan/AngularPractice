@@ -1,0 +1,26 @@
+<p>add-customer works!</p>
+<div>
+    <form  #myForm="ngForm" (ngSubmit)="myFunction(myForm.value)">
+
+        <div>
+            id: <input type="text" name="id" ngModel>
+        </div>
+        <div>
+            name: <input type="text" name="name"  ngModel>
+        </div> 
+         <div>
+            salary: <input type="text" name="salary"  ngModel>
+        </div>
+        <div>
+            DOB: <input type="date" name="dob"  ngModel>
+        </div>
+        <div>
+            email: <input type="email" name="email"ngModel>
+        </div>
+        <div>
+            <input type="submit" value="submit">
+            <input type="reset" value="reset">
+        </div>
+
+    </form>
+</div>

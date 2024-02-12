@@ -16,4 +16,10 @@ export class BackendServiceService {
   getCustomers(): Observable<Array<Customer>>{
     return this.http.get<Array<Customer>>(`${this.baseURL}/customer/all`);
   }
+
+  addCustomer(cust :Customer):Observable<Customer>{
+    return this.http.post<Customer>(`${this.baseURL}/customer/addCustomer`,cust);
+  }
+
+ 
 }
