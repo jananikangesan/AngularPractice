@@ -18,11 +18,10 @@
                 <td>{{cust.salary}}</td>
                 <td>{{cust.dob}}</td>
                 <td>{{cust.email}}</td>
-                <td>
-                    <form>
-                        <button>Update</button>
-                        <button>dalete</button>
-                    </form>
+                <td>  
+                    <!-- <button (click)="updateCust(cust.id)" >Update</button> -->
+                    <button (click)="deleteCust(cust.id)" >Delete</button>
+                   
                 </td>
             </tr>
         </tbody>

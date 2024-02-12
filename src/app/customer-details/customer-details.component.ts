@@ -16,12 +16,19 @@ export class CustomerDetailsComponent implements OnInit {
   }
   customers:Array<Customer>=[];
 
-  public  getAllEmployees(){
+   getAllEmployees(){
     this.backendService.getCustomers().subscribe((data: Array<Customer>) => {
         this.customers =  data;
         console.log(data);
     });
 
+  }
+
+  deleteCust(id:number){
+    this.backendService.deleteCustomer(id).subscribe(data=>{
+      console.log(data);
+      this.getAllEmployees();
+    })
   }
 
 }
