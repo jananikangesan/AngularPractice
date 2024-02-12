@@ -26,9 +26,13 @@ export class BackendServiceService {
     return this.http.delete<Customer>(`${this.baseURL}/customer/deleteCustomer/${custtId}`);
   }
 
- updateCustomer(custtId: number, cust:Customer): Observable<Customer> {  
+  getCustomerById(id:number):Observable<Customer>{
+    return this.http.get<Customer>(`${this.baseURL}/customer/find/${id}`);
+  }
+
+  updateCustomer(custtId: number, cust:Customer): Observable<Customer> {  
   return this.http.put<Customer>(`${this.baseURL}/customer/updateCustomer/${custtId}`,cust);
-}
+  }
 
 
  

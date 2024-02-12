@@ -14,6 +14,7 @@ import { BackendServiceService } from './service/backend-service.service';
 import { CustomerDetailsComponent } from './customer-details/customer-details.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AddCustomerComponent } from './add-customer/add-customer.component';
+import { UpdateCustomerComponent } from './update-customer/update-customer.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AddCustomerComponent } from './add-customer/add-customer.component';
     TwoWayBindingComponent,
     PipesDemoComponent,
     CustomerDetailsComponent,
-    AddCustomerComponent
+    AddCustomerComponent,
+    UpdateCustomerComponent
   ],
   imports: [
     BrowserModule,

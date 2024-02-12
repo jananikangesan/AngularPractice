@@ -22,13 +22,12 @@ export class AddCustomerComponent implements OnInit{
   public myFunction(cust : Customer){
    
     this.backendService.addCustomer(cust).subscribe(response => {
-      this.msg = 'saved product with Id '+response.id;
+      this.msg = 'saved customer with Id '+response.id;
       console.log(response);
      },
      (error) => {
       this.msg='error with product'+error
-      console.log(error)
-            },
+      console.log(error) },
       )
       this.myForm.resetForm();
   }

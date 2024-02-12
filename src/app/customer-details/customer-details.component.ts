@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BackendServiceService } from '../service/backend-service.service';
 import { Customer } from '../model/customer';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-customer-details',
@@ -9,7 +10,7 @@ import { Customer } from '../model/customer';
 })
 export class CustomerDetailsComponent implements OnInit {
 
-  constructor(private backendService:BackendServiceService){}
+  constructor(private backendService:BackendServiceService,private router:Router){}
 
   ngOnInit(): void {
     this.getAllEmployees();
@@ -23,6 +24,10 @@ export class CustomerDetailsComponent implements OnInit {
     });
 
   }
+  updateCust(id:number){
+   // alert(id);
+    this.router.navigate(['/UpdateCustomer',id]);
+  }
 
   deleteCust(id:number){
     this.backendService.deleteCustomer(id).subscribe(data=>{
@@ -30,5 +35,6 @@ export class CustomerDetailsComponent implements OnInit {
       this.getAllEmployees();
     })
   }
+ 
 
 }

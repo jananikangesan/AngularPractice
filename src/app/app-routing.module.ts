@@ -5,13 +5,15 @@ import { DisplayEmployeesComponent } from './display-employees/display-employees
 import { PipesDemoComponent } from './pipes-demo/pipes-demo.component';
 import { CustomerDetailsComponent } from './customer-details/customer-details.component';
 import { AddCustomerComponent } from './add-customer/add-customer.component';
+import { UpdateCustomerComponent } from './update-customer/update-customer.component';
 
 const routes: Routes = [
   {path:'TwoWaydemo',component:TwoWayBindingComponent},
   {path:'ShowEmployee',component:DisplayEmployeesComponent},
   {path:'PipeDemo',component:PipesDemoComponent},
   {path:'Backend',component:CustomerDetailsComponent},
-  {path:'AddCustomer',component:AddCustomerComponent}
+  {path:'AddCustomer',component:AddCustomerComponent},
+  {path:'UpdateCustomer/:id',component: UpdateCustomerComponent}
 ];
 
 @NgModule({

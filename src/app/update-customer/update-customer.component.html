@@ -1,0 +1,26 @@
+<p>update-customer works!</p>
+<div>
+    <form  #myForm="ngForm" (ngSubmit)="myUpdate()">
+
+        <div>
+            id: <input type="text" name="id" [(ngModel)]="cust.id">
+        </div>
+        <div>
+            name: <input type="text" name="name"  [(ngModel)]="cust.name">
+        </div> 
+         <div>
+            salary: <input type="text" name="salary"  [(ngModel)]="cust.salary">
+        </div>
+        <div>
+            DOB: <input type="date" name="dob"  [(ngModel)]="cust.dob">
+        </div>
+        <div>
+            email: <input type="email" name="email" [(ngModel)]="cust.email">
+        </div>
+        <div>
+            <input type="submit" value="update">
+            
+        </div>
+
+    </form>
+</div>
