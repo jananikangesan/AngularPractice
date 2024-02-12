@@ -26,7 +26,7 @@ export class AddCustomerComponent implements OnInit{
       console.log(response);
      },
      (error) => {
-      this.msg='error with product'+error
+      this.msg='error with customer'+error
       console.log(error) },
       )
       this.myForm.resetForm();
